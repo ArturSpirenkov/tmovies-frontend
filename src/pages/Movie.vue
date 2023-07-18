@@ -1,6 +1,14 @@
+<script lang="ts" setup>
+import Page from '../components/layout/Page.vue'
+
+</script>
+
 <template>
-  <header>
-    HEader
-    <button>Add</button>
-  </header>
+  <Page>
+    <template #title>
+      <div>
+        Movies
+      </div >
+    </template>
+  </Page>
 </template>
