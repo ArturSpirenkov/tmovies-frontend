@@ -24,7 +24,7 @@ const bgImg = `url(${bannerMock.poster})`
 </script>
 
 <template>
-  <div class="banner flex p-8 w-full h-[450px] rounded-2xl drop-shadow-xl cursor-pointer">
+  <div class="banner flex p-8 w-full rounded-2xl drop-shadow-xl cursor-pointer">
     <div class="self-end">
       <h1 class="mb-2 text-4xl font-bold">{{ bannerMock.title }}</h1>
       <p> {{ bannerMock.plot }}</p>

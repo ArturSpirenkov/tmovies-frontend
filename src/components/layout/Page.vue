@@ -1,16 +1,20 @@
 <script lang="ts" setup>
-interface Props {
-  title?: string;
+interface PropsPage {
+  title?: string
+  paddingless: boolean
 }
-
-defineProps<Props>()
+const props = withDefaults(defineProps<PropsPage>(),
+  {
+    paddingless: false
+  }
+)
 </script>
 
 <template>
   <section class="bg-movie-black flex h-full min-w-0 flex-1 flex-col overflow-y-auto w-full">
-    <div class="my-4 flex justify-between">
-      <h1 v-if="title" class="text-4xl font-weight-900 font-bold text-white">
-        {{ title }}
+    <div class="my-4 flex justify-between pl-4">
+      <h1 v-if="props.title" class="text-4xl font-weight-900 font-bold text-white">
+        {{ props.title }}
       </h1>
       <h1 v-else class="text-4xl font-weight-900 font-bold text-white">
         <slot name="title" />
@@ -19,7 +23,7 @@ defineProps<Props>()
         <slot name="header" />
       </div>
     </div>
-    <div class="text-white">
+    <div :class="props.paddingless ? '' : 'ml-4'">
       <slot></slot>
     </div>
   </section>
