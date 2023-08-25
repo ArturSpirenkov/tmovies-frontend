@@ -7,8 +7,8 @@ defineProps<Props>()
 </script>
 
 <template>
-  <section class="bg-movie-black flex h-full min-w-0 flex-1 flex-col overflow-y-auto ">
-    <div class="my-9 flex justify-between">
+  <section class="bg-movie-black flex h-full min-w-0 flex-1 flex-col overflow-y-auto w-full">
+    <div class="my-4 flex justify-between">
       <h1 v-if="title" class="text-4xl font-weight-900 font-bold text-white">
         {{ title }}
       </h1>

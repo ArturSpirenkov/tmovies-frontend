@@ -10,7 +10,7 @@ import {
   HomeIcon as HomeSolidIcon,
   FilmIcon as FilmSolidIcon,
   MagnifyingGlassIcon as MagnifyingGlassSolidIcon,
-} from "@heroicons/vue/24/solid";
+} from "@heroicons/vue/24/solid"
 
 const menu = [
   {
@@ -24,7 +24,7 @@ const menu = [
     activeIcon: MagnifyingGlassSolidIcon,
   },
   {
-    to: '/movies/1',
+    to: '/movies',
     icon: FilmIcon,
     activeIcon: FilmSolidIcon,
   },
@@ -45,7 +45,7 @@ const route = useRoute()
           route.path === to
             ? 'bg-movie-black-400 text-white'
             : 'text-gray-600 hover:bg-movie-black-400',
-          'inline-flex items-center justify-center h-14 w-14 rounded-lg',
+          'inline-flex items-center justify-center h-14 w-14 rounded-lg transition delay-150',
         ]"
       >
         <component :is="route.path === to ? activeIcon : icon" class="h-10 w-10"></component>
